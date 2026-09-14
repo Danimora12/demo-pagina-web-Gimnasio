@@ -37,6 +37,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--neon);border-radius:0}
 
+.demobar {
+  background: var(--brand-900);
+  color: var(--brand-300);
+  font-size: .8rem;
+  letter-spacing: .02em;
+  text-align: center;
+  padding: .45rem 1rem;
+}
+.demobar strong { color: var(--white); font-weight: 650; }
+.demobar a { color: var(--accent-400); text-underline-offset: 2px; }
+
 /* =========================================================
    UTILIDADES Y CONTENEDOR
    ========================================================= */
