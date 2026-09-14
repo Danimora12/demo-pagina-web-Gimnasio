@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IRONFORGE - El gimnasio premium donde transformas tu cuerpo, mente y rendimiento. Entrenadores élite, equipos de última generación.">
+<title>IRONFORGE — Forja tu mejor versión</title>
+
+<!-- Tipografías deportivas y de impacto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+
+
+/* =========================================================
+   ANIMACIONES SCROLL
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.2,.7,.3,1)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .hero-stats{max-width:500px}
+  .benefit-grid{grid-template-columns:repeat(2, 1fr)}
+  .benefit:nth-child(2){border-right:none}
+  .benefit:nth-child(1),.benefit:nth-child(2){border-bottom:1px solid var(--line)}
+  .plan-grid{grid-template-columns:1fr;max-width:500px}
+  .plan.featured{transform:none}
+  .plan.featured:hover{transform:translateY(-8px)}
+  .testi-grid{grid-template-columns:1fr;max-width:540px;margin:0 auto}
+  .gallery-grid{grid-template-columns:repeat(2, 1fr)}
+  .gallery-item.span-2{grid-column:span 1}
+  .gallery-item.span-row{grid-row:span 1}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media (max-width:720px){
+  section{padding:80px 0}
+  .nav-links{display:none}
+  .burger{display:flex}
+  .nav-cta{display:none}
+  .hero{padding:110px 0 80px}
+  .hero h1{font-size:3.2rem}
+  .hero-stats{padding:28px}
+  .stat-value{font-size:2rem}
+  .cta-row{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center;padding:16px 24px}
+  .benefit-grid{grid-template-columns:1fr}
+  .benefit{border-right:none;border-bottom:1px solid var(--line)}
+  .benefit:last-child{border-bottom:none}
+  .gallery-grid{grid-template-rows:200px 200px 200px 200px}
+  .foot-grid{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;text-align:center}
+  .section-header{margin-bottom:48px}
+}
+</style>
+</head>
+<body>
+
+<!-- ========================================================= 
+     NAVBAR
+     ========================================================= -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">IRON<span>FORGE</span></a>
+    <ul class="nav-links">
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#planes" class="nav-cta">Empezar</a>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ========================================================= 
+     HERO
+     ========================================================= -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-lines"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">Gimnasio Premium · Est. 2018</span>
+      <h1>
+        FORJA<br>
+        <span class="accent">TU CUERPO.</span>
+        <span class="stroke">REESCRIBE</span>
+        TUS LÍMITES.
+      </h1>
+      <p class="lead">
+        No es solo un gimnasio. Es <strong>el espacio donde se entrena la versión más fuerte de ti</strong>. Entrenadores élite, equipamiento de competición y una comunidad que no acepta excusas.
+      </p>
+      <div class="cta-row">
+        <a href="#planes" class="btn btn-primary">
+          Empieza gratis
+          <span class="arrow">→</span>
+        </a>
+        <a href="#beneficios" class="btn btn-ghost">Ver beneficios</a>
+      </div>
+    </div>
+
+    <!-- Card de estadísticas (prueba social rápida) -->
+    <aside class="hero-stats">
+      <h4>Resultados reales</h4>
+      <div class="stat-row">
+        <div class="stat-value">+2.4<span>K</span></div>
+        <div class="stat-label">Miembros activos</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-value">98<span>%</span></div>
+        <div class="stat-label">Logran sus metas</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-value">24/7</div>
+        <div class="stat-label">Acceso ilimitado</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Coaches certificados</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Marquee inferior -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Fuerza <span class="dot"></span> Disciplina <span class="dot"></span> Resultados <span class="dot"></span> Comunidad <span class="dot"></span> Transformación <span class="dot"></span> Sin excusas <span class="dot"></span></span>
+      <span>Fuerza <span class="dot"></span> Disciplina <span class="dot"></span> Resultados <span class="dot"></span> Comunidad <span class="dot"></span> Transformación <span class="dot"></span> Sin excusas <span class="dot"></span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ========================================================= 
+     BENEFICIOS
+     ========================================================= -->
+<section class="benefits" id="beneficios">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Por qué IronForge</span>
+      <h2>Todo lo que necesitas.<br>Nada que te frene.</h2>
+      <p>Diseñado para personas que no quieren un gimnasio cualquiera. Quieren resultados que se vean, se sientan y duren.</p>
+    </div>
+
+    <div class="benefit-grid">
+      <article class="benefit reveal">
+        <div class="benefit-num">01 / 04</div>
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v6"/><circle cx="12" cy="14" r="8"/><path d="M9 14l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Coaches Élite</h3>
+        <p>Entrenadores certificados con experiencia en alto rendimiento. No siguen rutinas genéricas: diseñan tu progreso semana a semana.</p>
+      </article>
+
+      <article class="benefit reveal">
+        <div class="benefit-num">02 / 04</div>
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="9" width="3" height="6"/><rect x="19" y="9" width="3" height="6"/>
+            <rect x="6" y="6" width="3" height="12"/><rect x="15" y="6" width="3" height="12"/>
+            <line x1="9" y1="12" x2="15" y2="12"/>
+          </svg>
+        </div>
+        <h3>Equipos de Competición</h3>
+        <p>Maquinaria Hammer Strength, Rogue y Eleiko. El mismo nivel de equipamiento que usan atletas profesionales y olímpicos.</p>
+      </article>
+
+      <article class="benefit reveal">
+        <div class="benefit-num">03 / 04</div>
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4"/>
+            <path d="M9 11V7a3 3 0 0 1 6 0v4"/><circle cx="12" cy="15" r="1"/>
+          </svg>
+        </div>
+        <h3>Plan 100% Personal</h3>
+        <p>Test de composición corporal, evaluación de movilidad y plan nutricional. Cada cuerpo es único, tu plan también lo será.</p>
+      </article>
+
+      <article class="benefit reveal">
+        <div class="benefit-num">04 / 04</div>
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3>Energía Pura</h3>
+        <p>Música, luz y diseño pensados para empujarte. Un espacio que te sube el pulso desde que entras y te recuerda por qué empezaste.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= 
+     PLANES
+     ========================================================= -->
+<section class="plans" id="planes">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Membresías</span>
+      <h2>Elige tu nivel.<br>Empieza la transformación.</h2>
+      <p>Sin contratos eternos. Sin letra pequeña. Solo entrenamiento real y resultados que vas a notar.</p>
+    </div>
+
+    <div class="plan-grid">
+      <!-- Plan Básico -->
+      <article class="plan reveal">
+        <div class="plan-name">Iron Start</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">29</span>
+          <span class="period">/mes</span>
+        </div>
+        <p class="plan-tag">Para arrancar fuerte sin compromisos.</p>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Acceso al área de máquinas y peso libre</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Horario L-V de 6:00 a 22:00</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Vestidores y duchas premium</li>
+          <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Clases grupales</li>
+          <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Plan personalizado</li>
+        </ul>
+        <a href="#" class="plan-cta">Empezar plan</a>
+      </article>
+
+      <!-- Plan Premium / Destacado -->
+      <article class="plan featured reveal">
+        <div class="plan-badge">Más popular</div>
+        <div class="plan-name">Iron Pro</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">59</span>
+          <span class="period">/mes</span>
+        </div>
+        <p class="plan-tag">El balance perfecto entre precio y resultado.</p>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Acceso ilimitado 24/7</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Todas las clases grupales (HIIT, Box, Yoga…)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Evaluación física inicial</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Plan de entrenamiento mensual</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> App con seguimiento de progreso</li>
+        </ul>
+        <a href="#" class="plan-cta">Quiero este plan</a>
+      </article>
+
+      <!-- Plan Élite -->
+      <article class="plan reveal">
+        <div class="plan-name">Iron Elite</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">99</span>
+          <span class="period">/mes</span>
+        </div>
+        <p class="plan-tag">Para quien quiere resultados serios, rápido.</p>
+        <ul class="plan-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Todo lo del plan Iron Pro</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> 4 sesiones mensuales con coach 1-a-1</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Plan nutricional personalizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Acceso a sauna y zona recovery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Seguimiento médico-deportivo trimestral</li>
+        </ul>
+        <a href="#" class="plan-cta">Reservar lugar</a>
+      </article>
+    </div>
+
+    <div class="guarantee reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3"/>
+        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3"/><path d="M12 3v18"/>
+      </svg>
+      Garantía 7 días o te devolvemos el 100%. Sin preguntas.
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= 
+     TESTIMONIOS
+     ========================================================= -->
+<section class="testimonials" id="testimonios">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Historias reales</span>
+      <h2>Resultados que hablan<br>más alto que las promesas.</h2>
+      <p>Más de 2.400 personas han transformado su cuerpo, su salud y su mentalidad con nosotros.</p>
+    </div>
+
+    <div class="testi-grid">
+      <article class="testi reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <span class="testi-result">-12 kg en 4 meses</span>
+        <p class="testi-quote">"Probé tres gimnasios antes y siempre dejé de ir. Aquí los coaches me hicieron sentir parte de algo. Hoy es la mejor decisión que he tomado por mí."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">María González</div>
+            <div class="testi-role">Diseñadora · 32 años</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <span class="testi-result">+8 kg músculo magro</span>
+        <p class="testi-quote">"Llevaba años entrenando solo y estancado. En 6 meses con el plan personalizado gané la masa muscular que no había conseguido en 3 años."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">D</div>
+          <div>
+            <div class="testi-name">Diego Ramírez</div>
+            <div class="testi-role">Ingeniero · 28 años</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="testi reveal">
+        <div class="testi-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <span class="testi-result">Mi mejor versión a los 41</span>
+        <p class="testi-quote">"Pensé que a los 40 ya era tarde. Hoy estoy más fuerte, con más energía y mejor cara que a los 25. El ambiente y los coaches lo cambian todo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">L</div>
+          <div>
+            <div class="testi-name">Laura Méndez</div>
+            <div class="testi-role">Empresaria · 41 años</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= 
+     GALERÍA
+     ========================================================= -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">El espacio</span>
+      <h2>Diseñado para empujarte<br>a tu límite.</h2>
+      <p>Más de 1.200 m² de zonas especializadas, equipos profesionales y un ambiente que respira intensidad.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item span-2 span-row reveal">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80" alt="Sala principal">
+        <span class="label">Sala principal · 600m²</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80" alt="Zona de pesas">
+        <span class="label">Peso libre</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80" alt="Zona cardio">
+        <span class="label">Zona cardio</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Box training">
+        <span class="label">Funcional · Box</span>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&q=80" alt="Estudios">
+        <span class="label">Estudios grupales</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= 
+     CTA FINAL
+     ========================================================= -->
+<section class="final-cta">
+  <div class="final-cta-content reveal">
+    <div class="urgency">
+      <span class="pulse"></span>
+      Solo 18 cupos disponibles este mes
+    </div>
+    <h2>Tu mejor versión<br><span class="neon">empieza hoy.</span></h2>
+    <p>El cuerpo que quieres no se construye mañana, ni el lunes, ni en enero. Se empieza ahora. Únete a IronForge y desbloquea tu primera semana <strong style="color:var(--neon)">100% gratis</strong>.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a href="#planes" class="btn btn-primary">
+        Reservar mi semana gratis
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <p style="margin-top:24px;font-size:.9rem;color:var(--muted)">Sin tarjeta. Sin compromiso. Sin excusas.</p>
+  </div>
+</section>
+
+<!-- ========================================================= 
+     FOOTER
+     ========================================================= -->
+<footer id="contacto">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">IRON<span>FORGE</span></a>
+        <p>El gimnasio premium donde se forjan los cuerpos, las mentes y los logros que la mayoría solo sueña.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43V8.62a8.16 8.16 0 004.77 1.52V6.69h-1.84z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="tel:+50612345678">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +506 1234 5678
+          </a></li>
+          <li><a href="mailto:hola@ironforge.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hola@ironforge.com
+          </a></li>
+          <li><a href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            San José, Costa Rica
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Horario</h5>
+        <ul>
+          <li style="color:var(--muted)">Lunes a Viernes: 5:00 - 23:00</li>
+          <li style="color:var(--muted)">Sábado: 7:00 - 21:00</li>
+          <li style="color:var(--muted)">Domingo: 8:00 - 18:00</li>
+          <li style="color:var(--neon);font-family:var(--heading);font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:.85rem;margin-top:8px">Plan Pro: 24/7</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>© 2026 IronForge. Todos los derechos reservados.</div>
+      <div style="display:flex;gap:24px">
+        <a href="#" style="color:var(--muted)">Política de privacidad</a>
+        <a href="#" style="color:var(--muted)">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
